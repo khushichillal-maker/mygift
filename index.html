@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thevash</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- WELCOME ENTRANCE SCREEN (OPEN DIARY LOGIC) -->
+    <div class="splash-screen" id="splashScreen">
+        <div class="diary-notebook">
+            <!-- LEFT PAGE -->
+            <div class="diary-page left-page">
+                <h1 class="diary-title">-ˏˋ⋆ ᴡ ᴇ ʟ ᴄ ᴏ ᴍ ᴇ ⋆ˊˎ-</h1>
+                
+                <div class="diary-section">
+                    <p class="section-title">♡ Who is this for?</p>
+                    <p class="section-body">vaishnavi, my favorite human, the absolute best ˗ˋˏ ♡ ˎˊ˗</p>
+                </div>
+
+                <div class="diary-section">
+                    <p class="section-title">♡ What's inside?</p>
+                    <p class="section-body">A whimsical garden, hidden secrets, and a special message made just for you.</p>
+                </div>
+                
+                <p class="diary-quote">"turn your volume up for the full experience!"</p>
+            </div>
+            
+            <!-- RIGHT PAGE -->
+            <div class="diary-page right-page">
+                <!-- Whimsical Sticker Graphic Stack -->
+                <div class="sticker-stack">
+                    <div class="cute-sticker main-art">🎀</div>
+                    <div class="cute-sticker sub-art"> 💓 </div>
+                    <div class="heart-badge">
+                        <span>Be Mine</span>
+                    </div>
+                </div>
+                
+                <!-- Next Page Action Trigger -->
+                <button class="diary-next-btn" onclick="enterWebsite()">Open My Gift <span>next page →</span></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN WEBSITE CONTAINER -->
+    <div class="container hidden" id="mainContainer">
+        <!-- HEADER -->
+        <header>
+            <h1>For My Favorite Human ✨</h1>
+        
+        </header>
+
+        <!-- GAME CARD -->
+        <div class="card" id="card1">
+            <div class="game-zone" id="gameZone1">
+                <h3>Hunt.Find.Unlock</h3>
+                <p class="hint">•.° - ₊˚ʚ ɞ˚₊ - °.•</p>
+                
+                <!-- Interactive Grid Space -->
+                <div class="garden-zone">
+                    <div class="fairy-sparkle sp1">✨</div>
+                    <div class="fairy-sparkle sp2">🌸</div>
+                    <div class="fairy-sparkle sp3">✨</div>
+
+                    <!-- 20 UNIVERSALLY COMPATIBLE EMOJIS -->
+                    <div class="garden-item i1" onclick="wrongGarden('🐝 Bzzzt, you annoying little buzzkill.')">🐝</div>
+                    <div class="garden-item i2" onclick="wrongGarden('🍀 A lucky four-leaf clover!')">🍀</div>
+                    <div class="garden-item i3" onclick="wrongGarden('🍉 You\'re one in a melon!')">🍉</div>
+                    <div class="garden-item i4" onclick="wrongGarden('🍦 Sweet soft-serve ice cream!')">🍦</div>
+                    <div class="garden-item i5" onclick="wrongGarden('🌷 If we were flowers, I\'d definitely pick you.')">🌷</div>
+                    <div class="garden-item i6" onclick="wrongGarden('🐞 A tiny crawling ladybug!')">🐞</div>
+                    <div class="garden-item i7" onclick="wrongGarden('🍅 Fresh red tomato!')">🍅</div>
+                    <div class="garden-item i8" onclick="wrongGarden('🍧 You\'re sweet, but a total hot mess')">🍧</div>
+                    <div class="garden-item i9" onclick="wrongGarden('🎡 You\'re the best part of the adventure.')">🎡</div>
+                    <div class="garden-item i10" onclick="wrongGarden('🌟 You\'re the Patrick to my SpongeBob, minus the charm.')">🌟</div>
+                    <div class="garden-item i11" onclick="wrongGarden('🎈 Keep floating, I\'m the view.')">🎈</div>
+                    <div class="garden-item i12" onclick="wrongGarden('🎤 Please put the mic down, my ears are begging you.')">🎤</div>
+                    <div class="garden-item i13" onclick="wrongGarden('☀️ You\'re my fav kind of sunshine.')">☀️</div>
+                    <div class="garden-item i14" onclick="wrongGarden('🎧 Playing: Do the dance bt ILLIT!')">🎧</div>
+                    <div class="garden-item i15" onclick="wrongGarden('✈️ Let\'s fly to your dream place: Paris')">✈️</div>
+                    <div class="garden-item i16" onclick="wrongGarden('🍜 At least the seasoning packet has more personality than you.')">🍜</div>
+                    <div class="garden-item i17" onclick="wrongGarden('🐒 Found your family portrait.')">🐒</div>
+                    <div class="garden-item i18" onclick="wrongGarden('🌳 Our friendship has deep roots.')">🌳</div>
+                    <div class="garden-item i19" onclick="wrongGarden('🍰 I’d save the last slice just for you')">🍰</div>
+                    
+                    <!-- THE WINNING KEY EMOJI -->
+                    <div class="garden-item winning-item i20" onclick="unlockFirstLetter()">🔑</div>
+                </div>
+                <p id="gardenHint" class="hint-text"></p>
+            </div>
+
+            <!-- HIDDEN SURPRISE LAYOUT -->
+            <div class="secret-content hidden" id="secretContent1">
+                <img src="photo.jpeg" alt="Our Special Memory" class="memory-pic">
+                <div class="letter">
+                    <h2 class="birthday-wish">✨ Happy Birthday Vaishnavi! 🎉🎂</h2>
+                    <p class="salutation">To my absolute person, Vaishoii</p>
+                    <p>You're my absolute favorite person to do absolutely nothing with.</p>
+                    <p>We will be best friends forever because at this point, you just know way too much about me.</p>
+                    <p>No matter where life takes us or how much we grow, 𝑰 𝒍𝒐𝒗𝒆 𝒚𝒐𝒖𝒖𝒖♡, and you will always be my best friend.</p>
+                    <p class="highlight-text">You are my Vaishnavi, the greatest person in the world ˗ˋˏ ♡ ˎˊ˗</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- BACKGROUND MUSIC TRACK -->
+    <audio id="bgMusic" loop>
+        <source src="our-song.mp3" type="audio/mp3">
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
