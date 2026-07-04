@@ -3,17 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thevash</title>
+    <title>ALilttleGift</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- WELCOME ENTRANCE SCREEN (OPEN DIARY LOGIC) -->
+    <!-- WELCOME ENTRANCE SCREEN (CLEAN NOTEBOOK CARD) -->
     <div class="splash-screen" id="splashScreen">
-        <div class="diary-notebook">
-            <!-- LEFT PAGE -->
-            <div class="diary-page left-page">
-                <h1 class="diary-title">-ˏˋ⋆ ᴡ ᴇ ʟ ᴄ ᴏ ᴍ ᴇ ⋆ˊˎ-</h1>
+        <div class="diary-notebook-page">
+            <div class="notebook-header">
+                <div class="heart-box">♥</div>
+                <div class="flower-deco">🌸 🌸 🌸</div>
+            </div>
+            
+            <div class="diary-content">
+                <h1 class="diary-title">Welcome ~</h1>
                 
                 <div class="diary-section">
                     <p class="section-title">♡ Who is this for?</p>
@@ -25,21 +29,15 @@
                     <p class="section-body">A whimsical garden, hidden secrets, and a special message made just for you.</p>
                 </div>
                 
-                <p class="diary-quote">"turn your volume up for the full experience!"</p>
-            </div>
-            
-            <!-- RIGHT PAGE -->
-            <div class="diary-page right-page">
-                <!-- Whimsical Sticker Graphic Stack -->
-                <div class="sticker-stack">
-                    <div class="cute-sticker main-art">🎀</div>
-                    <div class="cute-sticker sub-art"> 💓 </div>
-                    <div class="heart-badge">
-                        <span>Be Mine</span>
-                    </div>
+                <!-- Whimsical Sticker Graphic -->
+                <div class="sticker-container">
+                    <span class="cute-sticker">🎀</span>
+                    <span class="cute-sticker">💞</span>
                 </div>
+
+                <p class="diary-quote">"turn your volume up for the full experience!"</p>
                 
-                <!-- Next Page Action Trigger -->
+                <!-- Action Button -->
                 <button class="diary-next-btn" onclick="enterWebsite()">Open My Gift <span>next page →</span></button>
             </div>
         </div>
@@ -47,25 +45,23 @@
 
     <!-- MAIN WEBSITE CONTAINER -->
     <div class="container hidden" id="mainContainer">
-        <!-- HEADER -->
         <header>
             <h1>For My Favorite Human ✨</h1>
-        
+            
         </header>
 
         <!-- GAME CARD -->
         <div class="card" id="card1">
             <div class="game-zone" id="gameZone1">
-                <h3>Hunt.Find.Unlock</h3>
+                <h3>Hunt Find Unlock</h3>
                 <p class="hint">•.° - ₊˚ʚ ɞ˚₊ - °.•</p>
                 
-                <!-- Interactive Grid Space -->
                 <div class="garden-zone">
                     <div class="fairy-sparkle sp1">✨</div>
                     <div class="fairy-sparkle sp2">🌸</div>
                     <div class="fairy-sparkle sp3">✨</div>
 
-                    <!-- 20 UNIVERSALLY COMPATIBLE EMOJIS -->
+                    <!-- EMOJIS -->
                     <div class="garden-item i1" onclick="wrongGarden('🐝 Bzzzt, you annoying little buzzkill.')">🐝</div>
                     <div class="garden-item i2" onclick="wrongGarden('🍀 A lucky four-leaf clover!')">🍀</div>
                     <div class="garden-item i3" onclick="wrongGarden('🍉 You\'re one in a melon!')">🍉</div>
@@ -85,8 +81,6 @@
                     <div class="garden-item i17" onclick="wrongGarden('🐒 Found your family portrait.')">🐒</div>
                     <div class="garden-item i18" onclick="wrongGarden('🌳 Our friendship has deep roots.')">🌳</div>
                     <div class="garden-item i19" onclick="wrongGarden('🍰 I’d save the last slice just for you')">🍰</div>
-                    
-                    <!-- THE WINNING KEY EMOJI -->
                     <div class="garden-item winning-item i20" onclick="unlockFirstLetter()">🔑</div>
                 </div>
                 <p id="gardenHint" class="hint-text"></p>
@@ -96,8 +90,9 @@
             <div class="secret-content hidden" id="secretContent1">
                 <img src="photo.jpeg" alt="Our Special Memory" class="memory-pic">
                 <div class="letter">
-                    <h2 class="birthday-wish">✨ Happy Birthday Vaishnavi! 🎉🎂</h2>
-                    <p class="salutation">To my absolute person, Vaishoii</p>
+                    <!-- Locate this specific header inside your hidden layout -->
+<h2 class="birthday-wish pop-up-animation">✨ Happy Birthday Vaishnavi! 🎉🎂</h2>
+                    <p>To my absolute person, Vaishoii</p>
                     <p>You're my absolute favorite person to do absolutely nothing with.</p>
                     <p>We will be best friends forever because at this point, you just know way too much about me.</p>
                     <p>No matter where life takes us or how much we grow, 𝑰 𝒍𝒐𝒗𝒆 𝒚𝒐𝒖𝒖𝒖♡, and you will always be my best friend.</p>
@@ -106,7 +101,31 @@
             </div>
         </div>
     </div>
+<!-- HIDDEN SURPRISE LAYOUT -->
+<div class="secret-content hidden" id="secretContent1">
+    
+    <!-- INTERACTIVE POLAROID CONTAINER -->
+    <div class="polaroid-wrapper" id="polaroidCard" onclick="revealRealPhoto()">
+        <!-- Front side (Before clicking: Cute cover) -->
+        <div class="photo-front">
+            <div class="placeholder-icon">📸</div>
+            <p class="click-prompt">Click to reveal our memory ✨</p>
+        </div>
+        <!-- Back side (After clicking: Your real image) -->
+        <div class="photo-back">
+            <img src="photo.jpeg" alt="Our Special Memory" class="memory-pic">
+        </div>
+    </div>
 
+    <div class="letter">
+        <h2 class="birthday-wish pop-up-animation">✨ Happy Birthday Vaishnavi! 🎉🎂</h2>
+        <p class="salutation">To my absolute person, Vaishoii</p>
+        <p>You're my absolute favorite person to do absolutely nothing with.</p>
+        <p>We will be best friends forever because at this point, you just know way too much about me.</p>
+        <p>No matter where life takes us or how much we grow, 𝑰 𝒍𝒐𝒗𝒆 𝒚𝒐𝒖𝒖𝒖♡, and you will always be my best friend.</p>
+        <p class="highlight-text">You are my Vaishnavi, the greatest person in the world ˗ˋˏ ♡ ˎˊ˗</p>
+    </div>
+</div>
     <!-- BACKGROUND MUSIC TRACK -->
     <audio id="bgMusic" loop>
         <source src="our-song.mp3" type="audio/mp3">
