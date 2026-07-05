@@ -1,3 +1,4 @@
+/* FIXED IMPORT FOR CURSIVE AND SANS FONTS - ADDED EXPLICIT BOLD WEIGHT FOR CAVEAT */
 @import url('https://googleapis.com');
 
 * {
@@ -39,7 +40,7 @@ body {
 .diary-notebook-page {
     background: #ffffff;
     border-radius: 30px;
-    border: 6px solid #ff7fa6;
+    border: 6px solid #ff6593; /* Slightly darker pink for better readability */
     box-shadow: 0 12px 35px rgba(255, 127, 166, 0.15);
     max-width: 450px;
     width: 100%;
@@ -61,7 +62,7 @@ body {
 
 .heart-box {
     border: 2px solid #ffccd7;
-    color: #ff5e8c;
+    color: #ff4073;
     padding: 2px 8px;
     border-radius: 8px;
     font-size: 1.1rem;
@@ -69,7 +70,7 @@ body {
 }
 
 .flower-deco {
-    color: #ff5e8c;
+    color: #ff4073;
     font-size: 1rem;
     letter-spacing: 4px;
     opacity: 0.8;
@@ -78,8 +79,9 @@ body {
 /* DIARY INNER TEXT */
 .diary-title {
     font-family: 'Caveat', cursive;
-    font-size: 3rem;
-    color: #ff5e8c;
+    font-weight: 700; /* Forces the strong handwritten bold font weight */
+    font-size: 3.2rem;
+    color: #ff4073; /* Richer vibrant pink that doesn't blend into the background */
     margin-bottom: 20px;
     text-align: center;
 }
@@ -91,14 +93,14 @@ body {
 }
 
 .section-title {
-    color: #ff5e8c;
+    color: #ff4073;
     font-weight: bold;
-    font-size: 1rem;
+    font-size: 1.05rem;
 }
 
 .section-body {
     font-size: 0.95rem;
-    color: #5c4b4e;
+    color: #3d3436; /* Darkened slightly to make paragraph bodies easy to read */
 }
 
 .sticker-container {
@@ -114,7 +116,7 @@ body {
 
 .diary-quote {
     font-style: italic;
-    color: #a1888e;
+    color: #8c7379;
     font-size: 0.85rem;
     margin-bottom: 25px;
     text-align: center;
@@ -122,9 +124,10 @@ body {
 
 /* CUTE BUTTON */
 .diary-next-btn {
-    background: #ff5e8c;
+    background: #ff4073;
     border: none;
     font-family: 'Fredoka', sans-serif;
+    font-weight: 600;
     font-size: 1.1rem;
     color: white;
     cursor: pointer;
@@ -143,7 +146,7 @@ body {
 
 .diary-next-btn:hover {
     transform: translateY(-2px);
-    background-color: #ff4577;
+    background-color: #e62e5f;
 }
 
 /* MAIN INTERACTIVE CARD AREA */
@@ -155,29 +158,30 @@ body {
 
 header h1 {
     font-family: 'Caveat', cursive;
-    font-size: 3rem;
-    color: #ff5e8c;
+    font-weight: 700;
+    font-size: 3.5rem;
+    color: #ff4073;
     margin-bottom: 5px;
 }
 
-header p { font-size: 1rem; color: #7a6368; margin-bottom: 20px; }
+header p { font-size: 1rem; color: #695458; margin-bottom: 20px; }
 
 .card {
     background: #ffffff;
     border-radius: 30px; 
-    border: 6px solid #ff7fa6;
+    border: 6px solid #ff6593;
     padding: 30px 20px;
     box-shadow: 0 12px 35px rgba(255, 127, 166, 0.15);
     width: 100%;
 }
 
-h3 { font-family: 'Caveat', cursive; font-size: 2rem; color: #ff5e8c; }
-.hint { font-size: 0.9rem; color: #a1888e; margin-bottom: 15px; }
+h3 { font-family: 'Caveat', cursive; font-weight: 700; font-size: 2.4rem; color: #ff4073; }
+.hint { font-size: 0.9rem; color: #8c7379; margin-bottom: 15px; }
 
 /* MINI GARDEN WINDOW GRID */
 .garden-zone {
     background: #fdfaf6; 
-    border: 2px dashed #ff7fa6;
+    border: 2px dashed #ff6593;
     border-radius: 20px;
     height: 300px;
     width: 100%;
@@ -222,7 +226,7 @@ h3 { font-family: 'Caveat', cursive; font-size: 2rem; color: #ff5e8c; }
 .i19 { top: 40%;  left: 86%; }
 .i20 { top: 70%;  left: 88%; }
 
-.hint-text { font-size: 0.95rem; color: #ff5e8c; font-weight: bold; min-height: 20px; }
+.hint-text { font-size: 0.95rem; color: #ff4073; font-weight: bold; min-height: 20px; }
 
 /* REVEALED CONTENT - PHOTOCARD & LETTER WINDOW */
 .secret-content {
@@ -230,38 +234,17 @@ h3 { font-family: 'Caveat', cursive; font-size: 2rem; color: #ff5e8c; }
     flex-direction: column;
     align-items: center;
     position: relative;
-    padding-top: 25px; /* Creates clearance space for the clear sticky tape graphic */
+    padding-top: 25px;
 }
 
-/* POLAROID FRAME LOOK ATTACHED TO THE WALL */
-.memory-pic {
-    width: 100%;
-    max-width: 280px;
-    height: auto;
-    background: #ffffff;
-    /* Generates an accurate thick instant film/polaroid card white container border */
-    padding: 12px 12px 35px 12px; 
-    border-radius: 2px;
-    /* Soft diffuse multi-layered drop shadow to make it lift visually off the background wall */
-    box-shadow: 0 8px 20px rgba(0,0,0,0.12), 0 2px 5px rgba(0,0,0,0.06);
-    /* Playful tilt angle degree variation mimics being attached unevenly */
-    transform: rotate(-3deg);
-    margin-bottom: 25px;
-    transition: transform 0.3s ease;
-}
-
-.memory-pic:hover {
-    transform: rotate(0deg) scale(1.02);
-}
-
-/* CUTEST DIGITAL WASHI TAPE STICKER EFFECT HOLDING THE PHOTO UP */
+/* DECORATIVE WASHI TAPE STICKER EFFECT */
 .secret-content::before {
     content: "";
     position: absolute;
     top: 5px;
     width: 90px;
     height: 25px;
-    background: rgba(255, 182, 193, 0.5); /* Semitransparent soft pink tape tint */
+    background: rgba(255, 182, 193, 0.6);
     backdrop-filter: blur(1px);
     border-left: 2px dashed rgba(255,255,255,0.4);
     border-right: 2px dashed rgba(255,255,255,0.4);
@@ -270,44 +253,6 @@ h3 { font-family: 'Caveat', cursive; font-size: 2rem; color: #ff5e8c; }
     z-index: 5;
 }
 
-.letter {
-    text-align: center;
-    color: #5c4b4e;
-    width: 100%;
-}
-
-/* TONE-DOWNED COMPACT BIRTHDAY POP-UP ANIMATION */
-.birthday-wish {
-    font-family: 'Caveat', cursive;
-    font-size: 2.1rem; /* Slightly reduced font size so it sits comfortably inside mobile frames */
-    color: #ff5e8c;
-    margin-bottom: 15px;
-    text-shadow: 1px 1px 0px #ffffff;
-    width: 100%;
-    max-width: 100%;
-    white-space: normal; /* Permits clean text-wrapping on small smartphone layouts */
-    display: block;
-    text-align: center;
-}
-
-.pop-up-animation {
-    animation: gentleBounceInPop 0.6s cubic-bezier(0.25, 1, 0.5, 1) both; /* Faster, linear dampening curve */
-}
-
-@keyframes gentleBounceInPop {
-    0% { 
-        opacity: 0; 
-        transform: scale(0.85) translateY(5px); /* Scales from a larger baseline to minimize extreme motion bounds */
-    }
-    60% { 
-        opacity: 1; 
-        transform: scale(1.03) translateY(-1px); /* Toned down over-shoot limits text inside the frame wrapper boundaries */
-    }
-    100% { 
-        opacity: 1; 
-        transform: scale(1) translateY(0); 
-    }
-}
 /* INTERACTIVE PHOTOCARD FRAME STYLE */
 .polaroid-wrapper {
     width: 100%;
@@ -333,7 +278,6 @@ h3 { font-family: 'Caveat', cursive; font-size: 2rem; color: #ff5e8c; }
     box-shadow: 0 12px 25px rgba(0,0,0,0.15);
 }
 
-/* PLACEHOLDER WRAPPER (BEFORE CLICK) */
 .photo-front {
     display: flex;
     flex-direction: column;
@@ -354,13 +298,12 @@ h3 { font-family: 'Caveat', cursive; font-size: 2rem; color: #ff5e8c; }
 
 .click-prompt {
     font-size: 0.85rem;
-    color: #ff5e8c;
+    color: #ff4073;
     font-weight: bold;
 }
 
-/* THE REAL PICTURE CONTAINER (AFTER CLICK) */
 .photo-back {
-    display: none; /* Hidden by default until clicked */
+    display: none;
     width: 100%;
 }
 
@@ -372,31 +315,15 @@ h3 { font-family: 'Caveat', cursive; font-size: 2rem; color: #ff5e8c; }
     display: block;
 }
 
-/* CLASS THAT GETS TRIGGERED ON CLICK */
-.polaroid-wrapper.revealed .photo-front {
-    display: none;
-}
+.polaroid-wrapper.revealed .photo-front { display: none; }
+.polaroid-wrapper.revealed .photo-back { display: block; }
+.polaroid-wrapper.revealed { transform: rotate(0deg); }
 
-.polaroid-wrapper.revealed .photo-back {
-    display: block;
-}
-
-.polaroid-wrapper.revealed {
-    transform: rotate(0deg); /* Straightens out beautifully once opened */
-}
-/* Extra safety rule for ultra-narrow phones */
-@media (max-width: 380px) {
-    .birthday-wish {
-        font-size: 1.8rem;
-    }
-}
-
-.salutation {
-    font-family: 'Caveat', cursive;
-    font-size: 1.8rem;
-    color: #ff5e8c;
-    font-weight: bold;
-    margin-bottom: 10px;
+/* LETTER LAYOUT */
+.letter {
+    text-align: center;
+    color: #3d3436;
+    width: 100%;
 }
 
 .letter p {
@@ -405,23 +332,55 @@ h3 { font-family: 'Caveat', cursive; font-size: 2rem; color: #ff5e8c; }
     margin-bottom: 12px;
 }
 
+/* COMPACT BIRTHDAY POP-UP ANIMATION */
+.birthday-wish {
+    font-family: 'Caveat', cursive;
+    font-weight: 700; /* Set explicitly to bold weight */
+    font-size: 2.5rem; /* Increased size slightly to balance the thick font design */
+    color: #ff4073;
+    margin-bottom: 15px;
+    text-shadow: 1px 1px 0px #ffffff;
+    width: 100%;
+    max-width: 100%;
+    white-space: normal;
+    display: block;
+    text-align: center;
+}
+
+.pop-up-animation {
+    animation: gentleBounceInPop 0.6s cubic-bezier(0.25, 1, 0.5, 1) both;
+}
+
+@keyframes gentleBounceInPop {
+    0% { opacity: 0; transform: scale(0.85) translateY(5px); }
+    60% { opacity: 1; transform: scale(1.03) translateY(-1px); }
+    100% { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+.salutation {
+    font-family: 'Caveat', cursive;
+    font-weight: 700;
+    font-size: 2.1rem;
+    color: #ff4073;
+    margin-bottom: 10px;
+}
+
 .highlight-text {
     font-family: 'Caveat', cursive;
-    font-size: 1.6rem;
-    color: #ff5e8c;
-    font-weight: bold;
+    font-weight: 700;
+    font-size: 1.9rem;
+    color: #ff4073;
     margin-top: 10px;
 }
 
-/* BIRTHDAY POP UP BOUNCE ANIMATION */
-.pop-up-animation {
-    display: inline-block;
-    animation: bounceInPop 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
+/* EXTRA RESPONSIVE SAFETY LAYOUT BREAKPOINTS */
+@media (max-width: 380px) {
+    .birthday-wish { font-size: 2.1rem; }
+    .salutation { font-size: 1.8rem; }
+    .diary-title { font-size: 2.8rem; }
 }
 
-@keyframes bounceInPop {
-    0% { opacity: 0; transform: scale(0.3) rotate(-5deg); }
-    50% { opacity: 0.9; transform: scale(1.1) rotate(3deg); }
-    70% { transform: scale(0.95) rotate(-1deg); }
-    100% { opacity: 1; transform: scale(1) rotate(0deg); }
+@keyframes floatGently {
+    0% { transform: translateY(0px); }
+    100% { transform: translateY(-5px); }
 }
