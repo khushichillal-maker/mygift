@@ -1,4 +1,4 @@
-/* FIXED IMPORT FOR CURSIVE AND SANS FONTS - ADDED EXPLICIT BOLD WEIGHT FOR CAVEAT */
+/* FIXED IMPORTS - ADDED ALMENDRA DISPLAY FOR THE LAMBADA LOOK AND FREDOKA FOR CLEAN SANS TEXT */
 @import url('https://googleapis.com');
 
 * {
@@ -40,7 +40,7 @@ body {
 .diary-notebook-page {
     background: #ffffff;
     border-radius: 30px;
-    border: 6px solid #ff6593; /* Slightly darker pink for better readability */
+    border: 6px solid #ff6593;
     box-shadow: 0 12px 35px rgba(255, 127, 166, 0.15);
     max-width: 450px;
     width: 100%;
@@ -51,7 +51,7 @@ body {
     background-size: 100% 32px;
 }
 
-/* TOP NOTEBOOK GRAPHICS (Heart & Flowers from picture) */
+/* TOP NOTEBOOK GRAPHICS */
 .notebook-header {
     display: flex;
     justify-content: space-between;
@@ -76,14 +76,14 @@ body {
     opacity: 0.8;
 }
 
-/* DIARY INNER TEXT */
+/* DIARY INNER TEXT - TRANSITIONED TO MAGICAL ALMENDRA FONT STYLE */
 .diary-title {
-    font-family: 'Caveat', cursive;
-    font-weight: 700; /* Forces the strong handwritten bold font weight */
-    font-size: 3.2rem;
-    color: #ff4073; /* Richer vibrant pink that doesn't blend into the background */
+    font-family: 'Almendra Display', serif;
+    font-size: 3.6rem; /* Enhanced display sizing for the fairytale style */
+    color: #ff4073; 
     margin-bottom: 20px;
     text-align: center;
+    letter-spacing: 1px;
 }
 
 .diary-section {
@@ -100,7 +100,7 @@ body {
 
 .section-body {
     font-size: 0.95rem;
-    color: #3d3436; /* Darkened slightly to make paragraph bodies easy to read */
+    color: #3d3436;
 }
 
 .sticker-container {
@@ -157,8 +157,7 @@ body {
 }
 
 header h1 {
-    font-family: 'Caveat', cursive;
-    font-weight: 700;
+    font-family: 'Almendra Display', serif;
     font-size: 3.5rem;
     color: #ff4073;
     margin-bottom: 5px;
@@ -175,7 +174,11 @@ header p { font-size: 1rem; color: #695458; margin-bottom: 20px; }
     width: 100%;
 }
 
-h3 { font-family: 'Caveat', cursive; font-weight: 700; font-size: 2.4rem; color: #ff4073; }
+h3 { 
+    font-family: 'Almendra Display', serif; 
+    font-size: 2.6rem; 
+    color: #ff4073; 
+}
 .hint { font-size: 0.9rem; color: #8c7379; margin-bottom: 15px; }
 
 /* MINI GARDEN WINDOW GRID */
@@ -332,11 +335,11 @@ h3 { font-family: 'Caveat', cursive; font-weight: 700; font-size: 2.4rem; color:
     margin-bottom: 12px;
 }
 
-/* COMPACT BIRTHDAY POP-UP ANIMATION */
+/* COMPACT BIRTHDAY POP-UP ANIMATION - POWERED BY BOLD ALMENDRA VINTAGE HANDWRITTEN HAND */
 .birthday-wish {
-    font-family: 'Caveat', cursive;
-    font-weight: 700; /* Set explicitly to bold weight */
-    font-size: 2.5rem; /* Increased size slightly to balance the thick font design */
+    font-family: 'Almendra', serif;
+    font-weight: 700; /* Rich thick medieval whimsical serif line stroke weight */
+    font-size: 2.4rem; 
     color: #ff4073;
     margin-bottom: 15px;
     text-shadow: 1px 1px 0px #ffffff;
@@ -358,29 +361,30 @@ h3 { font-family: 'Caveat', cursive; font-weight: 700; font-size: 2.4rem; color:
 }
 
 .salutation {
-    font-family: 'Caveat', cursive;
+    font-family: 'Almendra', serif;
     font-weight: 700;
-    font-size: 2.1rem;
+    font-size: 2rem;
     color: #ff4073;
     margin-bottom: 10px;
 }
 
 .highlight-text {
-    font-family: 'Caveat', cursive;
+    font-family: 'Almendra', serif;
     font-weight: 700;
-    font-size: 1.9rem;
+    font-size: 1.75rem;
     color: #ff4073;
     margin-top: 10px;
 }
 
 /* EXTRA RESPONSIVE SAFETY LAYOUT BREAKPOINTS */
 @media (max-width: 380px) {
-    .birthday-wish { font-size: 2.1rem; }
-    .salutation { font-size: 1.8rem; }
-    .diary-title { font-size: 2.8rem; }
+    .birthday-wish { font-size: 2rem; }
+    .salutation { font-size: 1.7rem; }
+    .diary-title { font-size: 3rem; }
 }
 
 @keyframes floatGently {
     0% { transform: translateY(0px); }
     100% { transform: translateY(-5px); }
-}
+      }
+      
