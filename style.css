@@ -1,4 +1,4 @@
-/* FIXED IMPORTS - INCLUDED POTTA ONE FOR THE STRAWBERRY RUCKUS LOOK */
+/* FIXED IMPORTS - INCLUDED POTTA ONE FOR THE STRAWBERRY RUCKUS LOOK AND ALMENDRA FOR THE WISHES */
 @import url('https://googleapis.com');
 
 * {
@@ -79,12 +79,11 @@ body {
 /* DIARY TITLE - MATCHED TO THE STRAWBERRY RUCKUS STYLE */
 .diary-title {
     font-family: 'Potta One', cursive;
-    font-size: 2.5rem; /* Balanced size for thick bubble lettering */
-    color: #de1f5c; /* Deep, rich strawberry pink from your picture */
+    font-size: 2.5rem; 
+    color: #de1f5c; 
     margin-bottom: 20px;
     text-align: center;
     letter-spacing: -0.5px;
-    /* Cute layered 3D sticker look */
     text-shadow: 2px 2px 0px #ffccd7;
 }
 
@@ -161,18 +160,16 @@ body {
 /* 🍓 "FOR MY FAVORITE HUMAN" HEADER STYLED EXACTLY LIKE STRAWBERRY RUCKUS 🍓 */
 header h1 {
     font-family: 'Potta One', cursive;
-    font-size: 2.6rem; /* Thick bubble text size adjustment */
-    color: #de1f5c; /* True strawberry hot pink color */
+    font-size: 2.6rem; 
+    color: #de1f5c; 
     margin-bottom: 15px;
     position: relative;
     display: inline-block;
     padding: 0 10px;
     line-height: 1.2;
-    /* Recreates the fun, custom hand-drawn 3D shading pop effect from your image */
     text-shadow: 3px 3px 0px #ffe0e6;
 }
 
-/* Automatic cute floating stars/sparkles around the main title */
 header h1::before {
     content: "🍓★";
     position: absolute;
@@ -271,7 +268,6 @@ h3 {
     padding-top: 25px;
 }
 
-/* DECORATIVE WASHI TAPE STICKER EFFECT */
 .secret-content::before {
     content: "";
     position: absolute;
@@ -410,7 +406,7 @@ h3 {
 /* EXTRA RESPONSIVE SAFETY LAYOUT BREAKPOINTS */
 @media (max-width: 420px) {
     header h1 { font-size: 2.1rem; }
-    header h1::before, header h1::after { display: none; } /* Safely hides side stars if the phone screen gets too tight */
+    header h1::before, header h1::after { display: none; } 
 }
 
 @media (max-width: 380px) {
@@ -422,4 +418,4 @@ h3 {
 @keyframes floatGently {
     0% { transform: translateY(0px); }
     100% { transform: translateY(-5px); }
-}
+    }
