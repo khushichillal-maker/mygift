@@ -371,13 +371,7 @@ h3 {
     100% { opacity: 1; transform: scale(1) translateY(0); }
 }
 
-.salutation {
-    font-family: 'Almendra', serif;
-    font-weight: 700;
-    font-size: 1.8rem;
-    color: #ff4073;
-    margin-bottom: 10px;
-}
+
 
 .highlight-text {
     font-family: 'Almendra', serif;
