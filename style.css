@@ -1,4 +1,4 @@
-/* FIXED IMPORTS - ADDED ALMENDRA DISPLAY FOR THE LAMBADA LOOK AND FREDOKA FOR CLEAN SANS TEXT */
+/* FIXED IMPORTS - INCLUDED POTTA ONE FOR THE STRAWBERRY RUCKUS LOOK */
 @import url('https://googleapis.com');
 
 * {
@@ -76,14 +76,16 @@ body {
     opacity: 0.8;
 }
 
-/* DIARY INNER TEXT - TRANSITIONED TO MAGICAL ALMENDRA FONT STYLE */
+/* DIARY TITLE - MATCHED TO THE STRAWBERRY RUCKUS STYLE */
 .diary-title {
-    font-family: 'Almendra Display', serif;
-    font-size: 3.6rem; /* Enhanced display sizing for the fairytale style */
-    color: #ff4073; 
+    font-family: 'Potta One', cursive;
+    font-size: 2.5rem; /* Balanced size for thick bubble lettering */
+    color: #de1f5c; /* Deep, rich strawberry pink from your picture */
     margin-bottom: 20px;
     text-align: center;
-    letter-spacing: 1px;
+    letter-spacing: -0.5px;
+    /* Cute layered 3D sticker look */
+    text-shadow: 2px 2px 0px #ffccd7;
 }
 
 .diary-section {
@@ -149,18 +151,46 @@ body {
     background-color: #e62e5f;
 }
 
-/* MAIN INTERACTIVE CARD AREA */
+/* MAIN INTERACTIVE CONTAINER */
 .container {
     max-width: 450px;
     width: 100%;
     text-align: center;
 }
 
+/* 🍓 "FOR MY FAVORITE HUMAN" HEADER STYLED EXACTLY LIKE STRAWBERRY RUCKUS 🍓 */
 header h1 {
-    font-family: 'Almendra Display', serif;
-    font-size: 3.5rem;
-    color: #ff4073;
-    margin-bottom: 5px;
+    font-family: 'Potta One', cursive;
+    font-size: 2.6rem; /* Thick bubble text size adjustment */
+    color: #de1f5c; /* True strawberry hot pink color */
+    margin-bottom: 15px;
+    position: relative;
+    display: inline-block;
+    padding: 0 10px;
+    line-height: 1.2;
+    /* Recreates the fun, custom hand-drawn 3D shading pop effect from your image */
+    text-shadow: 3px 3px 0px #ffe0e6;
+}
+
+/* Automatic cute floating stars/sparkles around the main title */
+header h1::before {
+    content: "🍓★";
+    position: absolute;
+    left: -35px;
+    top: -5px;
+    font-size: 1.4rem;
+    opacity: 0.85;
+    color: #de1f5c;
+}
+
+header h1::after {
+    content: "★✨";
+    position: absolute;
+    right: -35px;
+    bottom: 5px;
+    font-size: 1.4rem;
+    opacity: 0.85;
+    color: #de1f5c;
 }
 
 header p { font-size: 1rem; color: #695458; margin-bottom: 20px; }
@@ -175,9 +205,10 @@ header p { font-size: 1rem; color: #695458; margin-bottom: 20px; }
 }
 
 h3 { 
-    font-family: 'Almendra Display', serif; 
-    font-size: 2.6rem; 
-    color: #ff4073; 
+    font-family: 'Potta One', cursive; 
+    font-size: 1.8rem; 
+    color: #de1f5c; 
+    text-shadow: 1px 1px 0px #ffe0e6;
 }
 .hint { font-size: 0.9rem; color: #8c7379; margin-bottom: 15px; }
 
@@ -335,10 +366,10 @@ h3 {
     margin-bottom: 12px;
 }
 
-/* COMPACT BIRTHDAY POP-UP ANIMATION - POWERED BY BOLD ALMENDRA VINTAGE HANDWRITTEN HAND */
+/* COMPACT BIRTHDAY POP-UP ANIMATION */
 .birthday-wish {
     font-family: 'Almendra', serif;
-    font-weight: 700; /* Rich thick medieval whimsical serif line stroke weight */
+    font-weight: 700;
     font-size: 2.4rem; 
     color: #ff4073;
     margin-bottom: 15px;
@@ -377,14 +408,18 @@ h3 {
 }
 
 /* EXTRA RESPONSIVE SAFETY LAYOUT BREAKPOINTS */
+@media (max-width: 420px) {
+    header h1 { font-size: 2.1rem; }
+    header h1::before, header h1::after { display: none; } /* Safely hides side stars if the phone screen gets too tight */
+}
+
 @media (max-width: 380px) {
     .birthday-wish { font-size: 2rem; }
     .salutation { font-size: 1.7rem; }
-    .diary-title { font-size: 3rem; }
+    .diary-title { font-size: 2.2rem; }
 }
 
 @keyframes floatGently {
     0% { transform: translateY(0px); }
     100% { transform: translateY(-5px); }
-      }
-      
+}
