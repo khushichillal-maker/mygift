@@ -7,18 +7,21 @@
 }
 
 body {
-    background-color: #ffffff;
+    /* Aged Paper Backdrop Tone */
+    background-color: #f4ebd9;
     background-image: 
-        linear-gradient(90deg, rgba(255, 224, 230, 0.5) 50%, transparent 50%),
-        linear-gradient(180deg, rgba(255, 224, 230, 0.5) 50%, transparent 50%);
-    background-size: 40px 40px; 
-    font-family: 'Fredoka', sans-serif;
-    color: #4a4a4a;
+        radial-gradient(rgba(139, 94, 60, 0.15) 1px, transparent 0),
+        radial-gradient(rgba(139, 94, 60, 0.15) 1px, transparent 0);
+    background-size: 32px 32px;
+    background-position: 0 0, 16px 16px;
+    font-family: 'Courier Prime', monospace;
+    color: #2b221a;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     padding: 15px;
+    overflow-x: hidden;
 }
 
 .hidden { display: none !important; }
@@ -27,7 +30,7 @@ body {
 .splash-screen {
     position: fixed;
     top: 0; left: 0; width: 100%; height: 100%;
-    background-color: #ffeef2;
+    background-color: #241c15;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -35,168 +38,161 @@ body {
     padding: 15px;
 }
 
-/* THE NOTEBOOK CARD WINDOW */
+/* ANTIQUE SCRAPBOOK NOTEBOOK WRAP */
 .diary-notebook-page {
-    background: #ffffff;
-    border-radius: 30px;
-    border: 6px solid #ff6593;
-    box-shadow: 0 12px 35px rgba(255, 127, 166, 0.15);
+    background: #fcf6e8;
+    border-radius: 4px;
+    border: 8px solid #5a1818; /* Rich Mahogany Crimson Crimson Border */
+    box-shadow: 5px 5px 0px #310c0c, 0 12px 35px rgba(0, 0, 0, 0.4);
     max-width: 450px;
     width: 100%;
     min-height: 560px;
-    padding: 30px 25px;
+    padding: 35px 25px;
     position: relative;
-    background-image: linear-gradient(#ffccd7 1px, transparent 1px);
-    background-size: 100% 32px;
 }
 
-/* TOP NOTEBOOK GRAPHICS */
 .notebook-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 40px;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
+    border-bottom: 2px dashed #8c735c;
 }
 
 .heart-box {
-    border: 2px solid #ffccd7;
-    color: #ff4073;
-    padding: 2px 8px;
-    border-radius: 8px;
-    font-size: 1.1rem;
-    background-color: #fffdfd;
+    color: #5a1818;
+    font-weight: bold;
+    font-size: 1rem;
+    letter-spacing: 1px;
 }
 
 .flower-deco {
-    color: #ff4073;
+    color: #8c735c;
     font-size: 1rem;
-    letter-spacing: 4px;
-    opacity: 0.8;
 }
 
-/* DIARY TITLE - MATCHED TO THE BUBBLE STRAWBERRY STYLE */
+/* SCRAPBOOK INSCRIPTION TITLES */
 .diary-title {
-    font-family: 'Potta One', cursive;
-    font-size: 2.1rem; 
-    color: #de1f5c; 
-    margin-bottom: 20px;
+    font-family: 'Special Elite', cursive;
+    font-size: 2.3rem; 
+    color: #5a1818; 
+    margin-bottom: 25px;
     text-align: center;
-    letter-spacing: -0.5px;
-    text-shadow: 2px 2px 0px #ffccd7;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .diary-section {
-    margin-bottom: 20px;
-    line-height: 1.5;
-    text-align: left;
+    margin-bottom: 22px;
+    line-height: 1.6;
 }
 
 .section-title {
-    color: #ff4073;
+    color: #5a1818;
     font-weight: bold;
     font-size: 1.05rem;
 }
 
 .section-body {
     font-size: 0.95rem;
-    color: #3d3436;
+    color: #3d3126;
+    background: rgba(139, 94, 60, 0.06);
+    padding: 10px;
+    border-left: 3px solid #8c735c;
+    margin-top: 5px;
 }
 
 .sticker-container {
-    margin: 15px 0;
+    margin: 20px 0;
     text-align: center;
 }
 
 .cute-sticker {
-    font-size: 2.5rem;
-    margin: 0 10px;
+    font-size: 2.2rem;
+    margin: 0 15px;
     display: inline-block;
+    filter: sepia(0.3);
 }
 
 .diary-quote {
+    font-family: 'Playfair Display', serif;
     font-style: italic;
-    color: #8c7379;
-    font-size: 0.85rem;
+    color: #615243;
+    font-size: 0.9rem;
     margin-bottom: 25px;
     text-align: center;
 }
 
-/* CUTE BUTTON */
+/* ANTIQUE VINTAGE CRIMSON BUTTON */
 .diary-next-btn {
-    background: #ff4073;
+    background: #5a1818;
     border: none;
-    font-family: 'Fredoka', sans-serif;
-    font-weight: 600;
-    font-size: 1.1rem;
-    color: white;
+    font-family: 'Special Elite', cursive;
+    font-size: 1rem;
+    color: #f4ebd9;
     cursor: pointer;
     width: 100%;
-    padding: 12px;
-    border-radius: 25px;
-    box-shadow: 0 4px 12px rgba(255, 94, 140, 0.3);
-    transition: transform 0.2s, background-color 0.2s;
+    padding: 14px;
+    border-radius: 2px;
+    box-shadow: 3px 3px 0px #310c0c;
+    transition: all 0.2s ease;
 }
 
 .diary-next-btn span {
     display: block;
     font-size: 0.8rem;
-    opacity: 0.9;
+    opacity: 0.8;
+    margin-top: 4px;
 }
 
 .diary-next-btn:hover {
-    transform: translateY(-2px);
-    background-color: #e62e5f;
+    transform: translate(1px, 1px);
+    box-shadow: 1px 1px 0px #310c0c;
+    background-color: #722222;
 }
 
-/* MAIN INTERACTIVE CONTAINER */
+/* INTERACTIVE ENGINE CORE ARCHITECTURE */
 .container {
     max-width: 450px;
     width: 100%;
     text-align: center;
 }
 
-/* ⭐ "JUST FOR YOU" HEADLINE STYLE (SINGLE COLUMN - NO WRAP) ⭐ */
 header h1 {
-    font-family: 'Playfair Display', 'Georgia', serif;
-    font-style: italic; 
-    font-weight: 700;
-    color: #de1f5c; 
-    margin-bottom: 20px;
+    font-family: 'Special Elite', cursive;
+    color: #5a1818; 
+    margin-bottom: 25px;
     display: block;
     text-align: center;
     width: 100%;
     white-space: nowrap; 
     letter-spacing: 0.5px;
-    text-shadow: 1px 1px 0px #ffe0e6;
-    font-size: calc(1.6rem + 1.5vw); 
+    font-size: calc(1.4rem + 1.2vw); 
 }
 
-header p { font-size: 1rem; color: #695458; margin-bottom: 20px; }
-
 .card {
-    background: #ffffff;
-    border-radius: 30px; 
-    border: 6px solid #ff6593;
+    background: #fdfaf2;
+    border-radius: 4px; 
+    border: 4px solid #423427;
     padding: 30px 20px;
-    box-shadow: 0 12px 35px rgba(255, 127, 166, 0.15);
+    box-shadow: 8px 8px 0px #211912, 0 12px 30px rgba(0,0,0,0.15);
     width: 100%;
 }
 
 h3 { 
-    font-family: 'Potta One', cursive; 
-    font-size: 1.5rem; 
-    color: #de1f5c; 
-    text-shadow: 1px 1px 0px #ffe0e6;
+    font-family: 'Special Elite', cursive; 
+    font-size: 1.4rem; 
+    color: #5a1818; 
 }
-.hint { font-size: 0.9rem; color: #8c7379; margin-bottom: 15px; }
+.hint { font-size: 0.9rem; color: #6b5947; font-style: italic; margin-bottom: 15px; }
 
-/* MINI GARDEN WINDOW GRID */
+/* MINI GARDEN / ENOLA CIPHER GRID */
 .garden-zone {
-    background: #fdfaf6; 
-    border: 2px dashed #ff6593;
-    border-radius: 20px;
-    height: 300px;
+    background: #f5eedc; 
+    border: 2px solid #8c735c;
+    border-radius: 2px;
+    height: 320px;
     width: 100%;
     position: relative;
     overflow: hidden;
@@ -209,39 +205,40 @@ h3 {
     position: absolute;
     user-select: none;
     transition: transform 0.2s;
+    filter: drop-shadow(1px 1px 1px rgba(0,0,0,0.15));
 }
-.garden-item:hover { transform: scale(1.2); }
+.garden-item:hover { transform: scale(1.3) rotate(5deg); }
 
 .winning-item {
-    font-size: 2rem;
+    font-size: 2.1rem;
     z-index: 10;
 }
 
-/* ITEM PLACEMENTS */
-.i1  { top: 8%;   left: 10%; }
-.i2  { top: 7%;   left: 40%; }
-.i3  { top: 8%;   left: 75%; }
-.i4  { top: 25%;  left: 15%; }
-.i5  { top: 22%;  left: 50%; }
+/* ENOLA SYMBOL COMPASS PLACEMENTS */
+.i1  { top: 8%;   left: 12%; }
+.i2  { top: 6%;   left: 44%; }
+.i3  { top: 9%;   left: 76%; }
+.i4  { top: 25%;  left: 18%; }
+.i5  { top: 22%;  left: 48%; }
 .i6  { top: 23%;  left: 78%; }
-.i7  { top: 40%;  left: 10%; }
-.i8  { top: 38%;  left: 44%; }
-.i9  { top: 42%;  left: 72%; }
+.i7  { top: 41%;  left: 12%; }
+.i8  { top: 38%;  left: 45%; }
+.i9  { top: 40%;  left: 74%; }
 .i10 { top: 58%;  left: 15%; }
 .i11 { top: 56%;  left: 48%; }
-.i12 { top: 55%;  left: 76%; }
-.i13 { top: 74%;  left: 10%; }
-.i14 { top: 72%;  left: 42%; }
+.i12 { top: 55%;  left: 78%; }
+.i13 { top: 74%;  left: 12%; }
+.i14 { top: 72%;  left: 44%; }
 .i15 { top: 75%;  left: 72%; }
-.i16 { top: 88%;  left: 15%; }
-.i17 { top: 88%;  left: 45%; }
-.i18 { top: 87%;  left: 75%; }
-.i19 { top: 40%;  left: 86%; }
-.i20 { top: 70%;  left: 88%; }
+.i16 { top: 88%;  left: 18%; }
+.i17 { top: 87%;  left: 47%; }
+.i18 { top: 86%;  left: 76%; }
+.i19 { top: 42%;  left: 86%; }
+.i20 { top: 69%;  left: 87%; }
 
-.hint-text { font-size: 0.95rem; color: #ff4073; font-weight: bold; min-height: 20px; }
+.hint-text { font-size: 0.9rem; color: #5a1818; font-weight: bold; min-height: 22px; margin-top: 10px; }
 
-/* REVEALED CONTENT - PHOTOCARD & LETTER WINDOW */
+/* REVEALED CONTENT - POLAROID AND INNER MESSAGE */
 .secret-content {
     display: flex;
     flex-direction: column;
@@ -252,103 +249,133 @@ h3 {
 
 /* DECORATIVE WASHI TAPE STICKER EFFECT */
 .secret-content::before {
-    content: "";
+    content: "TOP SECRET";
+    font-family: 'Special Elite', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 1px;
+    color: rgba(90, 24, 24, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: absolute;
-    top: 5px;
-    width: 90px;
-    height: 25px;
-    background: rgba(255, 182, 193, 0.6);
-    backdrop-filter: blur(1px);
-    border-left: 2px dashed rgba(255,255,255,0.4);
-    border-right: 2px dashed rgba(255,255,255,0.4);
-    box-shadow: 0 2px 4px rgba(0,0,0,0.04);
-    transform: rotate(-5deg);
+    top: 5px; width: 110px; height: 25px;
+    background: rgba(218, 197, 166, 0.7);
+    border-left: 2px dashed rgba(0,0,0,0.15);
+    border-right: 2px dashed rgba(0,0,0,0.15);
+    transform: rotate(-4deg);
     z-index: 5;
 }
 
-/* POLAROID FRAME LOOK ATTACHED TO THE WALL */
+/* POLAROID VINTAGE CARD STYLING */
 .polaroid-wrapper {
     width: 100%;
     max-width: 270px;
     background: #ffffff;
-    /* Traditional wide instant film/polaroid card format proportions */
-    padding: 12px 12px 35px 12px; 
-    border-radius: 2px;
-    border: 1px solid #ffccd7;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.1), 0 2px 5px rgba(0,0,0,0.05);
-    transform: rotate(-3deg);
+    padding: 12px 12px 42px 12px; 
+    border-radius: 1px;
+    border: 1px solid #c2b49a;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    transform: rotate(-2deg);
     margin-bottom: 25px;
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+    cursor: pointer;
 }
 
-/* RESTORED ORIGINAL AUTOMATIC IMAGE CONFIGURATION WINDOW */
+/* WAX SEAL OVERLAY OVER MEMORY PICTURE */
+.polaroid-wrapper::after {
+    content: "💨 Blow to break the Crimson Wax Seal! 💌";
+    position: absolute;
+    top: 12px; left: 12px; right: 12px; bottom: 42px;
+    background: #5a1818;
+    color: #f4ebd9;
+    font-family: 'Special Elite', cursive;
+    font-size: 0.9rem;
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 4px double #8c735c;
+    box-shadow: inset 0 0 15px rgba(0,0,0,0.5);
+    transition: opacity 1.4s cubic-bezier(0.25, 1, 0.5, 1), visibility 1.4s;
+    z-index: 10;
+}
+
+/* REMOVE WAX SEAL */
+.polaroid-wrapper.revealed::after {
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+}
+
 .memory-pic {
     width: 100%;
-    height: auto; /* Lets the photo scale naturally using its original width/height bounds */
+    height: auto;
     display: block;
-    border-radius: 2px;
+    filter: sepia(0.15) contrast(1.05);
 }
 
-/* LETTER LAYOUT */
 .letter {
     text-align: center;
-    color: #3d3436;
+    color: #2b221a;
     width: 100%;
 }
 
 .letter p {
     font-size: 0.95rem;
-    line-height: 1.6;
+    line-height: 1.7;
     margin-bottom: 12px;
 }
 
-/* 🌸 MOBILE-SAFE TWOW-LINE ADJUSTED HAPPY BIRTHDAY LAYOUT TEXT 🌸 */
 .birthday-wish {
-    font-family: 'Almendra', serif;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
     font-weight: 700;
-    font-size: 2rem; /* Reduced slightly so the text scales safely into 2 balanced lines */
+    font-size: 2.1rem;
     line-height: 1.3;
-    color: #ff4073;
-    margin-bottom: 18px;
-    text-shadow: 1px 1px 0px #ffffff;
+    color: #5a1818;
+    margin-bottom: 20px;
     width: 100%;
     display: block;
-    text-align: center;
 }
 
 .pop-up-animation {
-    animation: gentleBounceInPop 0.6s cubic-bezier(0.25, 1, 0.5, 1) both;
+    animation: gentleBounceInPop 0.7s cubic-bezier(0.25, 1, 0.5, 1) both;
+}
+
+/* AMBIENT DANDELION SEED ELEMENT STYLING */
+.dandelion-seed {
+    position: fixed;
+    color: rgba(90, 24, 24, 0.15); /* Vintage brown tint seeds */
+    font-size: 1.4rem;
+    pointer-events: none;
+    z-index: 2000;
+    animation: driftUpward 7.5s linear forwards;
+}
+
+@keyframes driftUpward {
+    0% {
+        transform: translateY(105vh) translateX(0) rotate(0deg);
+        opacity: 0;
+    }
+    12% { opacity: 1; }
+    88% { opacity: 1; }
+    100% {
+        transform: translateY(-15vh) translateX(140px) rotate(320deg);
+        opacity: 0;
+    }
 }
 
 @keyframes gentleBounceInPop {
-    0% { opacity: 0; transform: scale(0.85) translateY(5px); }
-    60% { opacity: 1; transform: scale(1.03) translateY(-1px); }
+    0% { opacity: 0; transform: scale(0.88) translateY(8px); }
     100% { opacity: 1; transform: scale(1) translateY(0); }
 }
 
-
-
-/* EXTRA RESPONSIVE SAFETY LAYOUT BREAKPOINTS */
 @media (max-width: 450px) {
-    .container {
-        max-width: 94%;
-        margin: 0 auto;
-    }
-    header h1 {
-        font-size: 1.8rem; 
-    }
-}
-
-@media (max-width: 380px) {
-    header h1 { font-size: 1.5rem; }
-    .birthday-wish { font-size: 1.7rem; } /* Safely downsizes further on small displays */
-    .salutation { font-size: 1.5rem; }
-    .diary-title { font-size: 1.9rem; }
-}
-
-@keyframes floatGently {
-    0% { transform: translateY(0px); }
-    100% { transform: translateY(-5px); }
+    .container { max-width: 94%; }
+    header h1 { font-size: 1.6rem; }
 }
